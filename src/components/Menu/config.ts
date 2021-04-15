@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://shrimpswap-frontend.netlify.app'
+    href: 'https://shrimpswap.finance'
   },
   {
     label: 'Trade',
@@ -23,27 +23,27 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://shrimpswap-frontend.netlify.app/farms'
+    href: 'https://shrimpswap.finance/farms'
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://shrimpswap-frontend.netlify.app/pools'
+    href: 'https://shrimpswap.finance/pools'
   },
   // {
   //   label: 'Oceans',
   //   icon: 'WaveIcon',
-  //   href: 'https://shrimpswap-frontend.netlify.app/oceans',
+  //   href: 'https://shrimpswap.finance/oceans',
   // },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
-  //   href: 'https://shrimpswap-frontend.netlify.app/lottery',
+  //   href: 'https://shrimpswap.finance/lottery',
   // },
   // {
   //   label: 'Launchpad (IDOs)',
   //   icon: 'IdoIcon',
-  //   href: 'https://shrimpswap-frontend.netlify.app/ido',
+  //   href: 'https://shrimpswap.finance/ido',
   // },
   // {
   //   label: 'Audited By Certik ✅',
@@ -53,7 +53,7 @@ const config: MenuEntry[] = [
   {
     label: 'Price',
     icon: 'GraphIcon',
-    href: 'https://shrimpswap-frontend.netlify.app/graph',
+    href: 'https://shrimpswap.finance/graph',
   },
   // {
   //   label: 'Listings',
@@ -76,7 +76,7 @@ const config: MenuEntry[] = [
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
-  //   href: 'https://shrimpswap-frontend.netlify.app/lottery'
+  //   href: 'https://shrimpswap.finance/lottery'
   // },
   // {
   //   label: 'Info',
