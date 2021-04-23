@@ -33,7 +33,7 @@ const useGetPriceData = () => {
             [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
           ];
 
-          const [result] = await multicallContract.aggregate(calls);
+          const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
           const [cakeAmount, busdAmount] = result.map(r => ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
           const cake = new BigNumber(cakeAmount);
           const busd = new BigNumber(busdAmount);
