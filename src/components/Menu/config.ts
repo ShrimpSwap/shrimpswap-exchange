@@ -30,11 +30,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: 'https://shrimpswap.finance/pools'
   },
-  // {
-  //   label: 'Oceans',
-  //   icon: 'WaveIcon',
-  //   href: 'https://shrimpswap.finance/oceans',
-  // },
+  {
+    label: 'Oceans',
+    icon: 'WaveIcon',
+    href: 'https://shrimpswap.finance/oceans',
+  },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
