@@ -21,14 +21,14 @@ const config: MenuEntry[] = [
     ],
   },
   {
-    label: 'Farms',
+    label: 'Shrimp Farming',
     icon: 'FarmIcon',
     href: 'https://shrimpswap.finance/farms'
   },
   {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://shrimpswap.finance/pools'
+    label: 'Whale Farming V2',
+    icon: 'FarmIcon',
+    href: 'https://shrimpswap.finance/whalefarms'
   },
   // {
   //   label: 'Oceans',

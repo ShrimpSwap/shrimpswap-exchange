@@ -18,6 +18,13 @@
       "decimals": 18
     },
     {
+      "name": "Whale Token",
+      "symbol": "WHALE",
+      "address": "0x93662179C3590D4dA42858ABE917C10542a40831",
+      "chainId": 56,
+      "decimals": 18
+    },
+    {
       "name": "WBNB Token",
       "symbol": "WBNB",
       "address": "0xae13d989dac2f0debff460ac112a837c89baa7cd",
