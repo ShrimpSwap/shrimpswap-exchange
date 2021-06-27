@@ -30,11 +30,11 @@ const config: MenuEntry[] = [
     icon: 'FarmIcon',
     href: 'https://shrimpswap.finance/whalefarms'
   },
-  // {
-  //   label: 'Oceans',
-  //   icon: 'WaveIcon',
-  //   href: 'https://shrimpswap.finance/oceans',
-  // },
+  {
+    label: 'Oceans',
+    icon: 'WaveIcon',
+    href: 'https://shrimpswap.finance/oceans',
+  },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
@@ -51,28 +51,28 @@ const config: MenuEntry[] = [
   //   href: 'https://certik.org/projects/shrimpswap',
   // },
   {
+    label: 'Listings',
+    icon: 'ListingIcon',
+    items: [
+      // {
+      //   label: 'CoinMarketCap',
+      //   href: 'https://coinmarketcap.com/currencies/shrimpswap-finance',
+      // },
+      // {
+      //   label: 'CoinGecko',
+      //   href: 'https://www.coingecko.com/en/coins/shrimpswap',
+      // },
+      {
+        label: 'DappRadar',
+        href: 'https://dappradar.com/binance-smart-chain/defi/shrimpswap',
+      },
+    ],
+  },
+  {
     label: 'Price',
     icon: 'GraphIcon',
     href: 'https://shrimpswap.finance/graph',
   },
-  // {
-  //   label: 'Listings',
-  //   icon: 'ListingIcon',
-  //   items: [
-  //     {
-  //       label: 'CoinMarketCap',
-  //       href: 'https://coinmarketcap.com/currencies/shrimpswap-finance',
-  //     },
-  //     {
-  //       label: 'CoinGecko',
-  //       href: 'https://www.coingecko.com/en/coins/shrimpswap',
-  //     },
-  //     {
-  //       label: 'DappRadar',
-  //       href: 'https://dappradar.com/binance-smart-chain/defi/shrimpswap',
-  //     },
-  //   ],
-  // },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
@@ -102,15 +102,20 @@ const config: MenuEntry[] = [
     icon: 'GithubIcon'
   },
   {
+    label: 'Roadmap',
+    href: 'https://shrimpswap.gitbook.io/shrimpswap/roadmap',
+    icon: 'RoadmapIcon',
+  },
+  {
     label: "Docs",
     href: "https://shrimpswap.gitbook.io",
     icon: 'GitbookIcon'
   },
-  {
-    label: "Blog",
-    href: 'https://medium.com/@shrimpyswap',
-    icon: 'MediumIcon'
-  },
+  // {
+  //   label: "Blog",
+  //   href: 'https://medium.com/@shrimpyswap',
+  //   icon: 'MediumIcon'
+  // },
   // ],
   // },
 ]
