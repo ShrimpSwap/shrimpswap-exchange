@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
-import useGetPriceData from 'hooks/useGetPriceData'
+import { useGetPriceData, useGetWhalePriceData } from 'hooks/useGetPriceData'
 import { injected, bsc, walletconnect } from 'connectors'
 import links from './config'
 
@@ -13,11 +13,13 @@ const Menu: React.FC = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = useGetPriceData()
+  const whalePriceUsd = useGetWhalePriceData()
 
   return (
     <UikitMenu
       links={links}
       priceLink="#"
+      whalePriceLink="#"
       account={account as string}
       login={(connectorId: ConnectorId) => {
         if (connectorId === 'walletconnect') {
@@ -37,6 +39,7 @@ const Menu: React.FC = (props) => {
       langs={allLanguages}
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd}
+      whalePriceUsd={whalePriceUsd}
       {...props}
     />
   )
