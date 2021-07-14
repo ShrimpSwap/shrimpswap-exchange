@@ -17,7 +17,7 @@ import priceContracts from '../constants/shrimpPriceContracts'
  */
 // const api = 'https://api.pancakeswap.com/api/v1/price'
 
-const useGetPriceData = () => {
+export const useGetPriceData = () => {
   const [data, setData] = useState<number>(0)
 
   const multicallContract = useMulticallContract();
@@ -52,4 +52,39 @@ const useGetPriceData = () => {
   return data
 }
 
-export default useGetPriceData
+export const useGetWhalePriceData = () => {
+  const [data, setData] = useState<number>(0)
+
+  const multicallContract = useMulticallContract();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (multicallContract) {
+          const whaleAddress = "0x93662179C3590D4dA42858ABE917C10542a40831"
+          const busdAddress = "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+          const lpAddress = "0x13f0A2cbf6d1090231F3392c4ed2DD5E37AE005F"
+
+          const calls = [
+            [whaleAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+            [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])], // 
+          ];
+
+          const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
+          const [cakeAmount, busdAmount] = result.map(r => ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
+          const cake = new BigNumber(cakeAmount);
+          const busd = new BigNumber(busdAmount);
+          const cakePrice = busd.div(cake).toNumber();
+
+          setData(cakePrice)
+        }
+      } catch (error) {
+        console.error('Unable to fetch price data:', error)
+      }
+    }
+
+    fetchData()
+  }, [multicallContract])
+
+  return data
+}
