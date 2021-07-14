@@ -11,7 +11,7 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange V2',
+        label: 'Exchange',
         href: '/swap',
       },
       {
